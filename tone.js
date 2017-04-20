@@ -4,8 +4,8 @@ var watson = require('watson-developer-cloud');
 var exports = module.exports = {};
 
 var tone_analyzer = watson.tone_analyzer({
-  username: 'ef3a67bc-8698-4620-8e87-06ef27b037a6',
-  password: 'mDRrzcP2APd7',
+  username: TOKEN,
+  password: ,
   version: 'v3',
   version_date: '2016-05-19 '
 });

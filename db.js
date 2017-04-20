@@ -1,8 +1,6 @@
-// mongodb://<dbuser>:<dbpassword>@ds159220.mlab.com:59220/bamboo
-
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://admin:henryitunes@ds159220.mlab.com:59220/bamboo');
+mongoose.connect('');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

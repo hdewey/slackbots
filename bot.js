@@ -10,7 +10,7 @@ var exports = module.exports = {};
 
 // create a bot
 var settings = {
-  token: 'xoxb-167112700066-opReMV2Q9EfMvFe9aCYcRI8G',
+  token: '',
   name: "Henry's Bot"
 };
 
