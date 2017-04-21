@@ -1,12 +1,16 @@
+// Set up .ENV to secure passwords and api keys
 require("dotenv").config();
 
+// Require useful packages
 var Bot = require('slackbots');
-var _ = require("underscore");
+var _   = require("underscore");
 
-var tone = require("./tone.js").tone;
-var emotion = require('./tone.js').emotion;
+// Require functions made in other files.
+var tone         = require("./tone.js").tone;
+var emotion      = require('./tone.js').emotion;
 var conversation = require("./conversation.js").conversation;
 
+// Set up module.exports
 var exports = module.exports = {};
 
 // create a bot
