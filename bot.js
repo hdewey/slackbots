@@ -1,4 +1,5 @@
-// 
+require("dotenv").config();
+
 var Bot = require('slackbots');
 var _ = require("underscore");
 
@@ -10,11 +11,9 @@ var exports = module.exports = {};
 
 // create a bot
 var settings = {
-  token: '',
+  token: process.env.SLACKBOT_TOKEN,
   name: "Henry's Bot"
 };
-
-var channel = 'hdewey';
 
 var bot = new Bot(settings);
 

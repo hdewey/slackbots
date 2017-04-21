@@ -1,12 +1,12 @@
-
-var watson = require('watson-developer-cloud');
+require("dotenv").config();
+var watson  = require('watson-developer-cloud');
 
 var exports = module.exports = {};
 
 var tone_analyzer = watson.tone_analyzer({
-  username: TOKEN,
-  password: ,
-  version: 'v3',
+  username    : process.env.WATSON_USERNAME,
+  password    : process.env.WATSON_PASSWORD,
+  version     : 'v3',
   version_date: '2016-05-19 '
 });
 
@@ -20,7 +20,7 @@ exports.tone = function(bot, text) {
         
         var tones = tone.document_tone.tone_categories[0].tones;
         
-        var stats_names = [];
+        var stats_names  = [];
         var stats_scores = [];
         
         //console.log(JSON.stringify(tones, null, 2));

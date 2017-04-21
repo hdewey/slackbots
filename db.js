@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 var mongoose = require('mongoose');
 
-mongoose.connect('');
+mongoose.connect(process.env.MONGODB_MLAB_ID);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
