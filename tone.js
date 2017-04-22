@@ -9,10 +9,10 @@ var exports = module.exports = {};
 
 // Setting up the tone analyzer
 var tone_analyzer = watson.tone_analyzer({
-  username    : process.env.WATSON_USERNAME,
-  password    : process.env.WATSON_PASSWORD,
-  version     : 'v3',
-  version_date: '2016-05-19 '
+  username     : process.env.WATSON_USERNAME,
+  password     : process.env.WATSON_PASSWORD,
+  version      : 'v3',
+  version_date : '2016-05-19 '
 });
 
 exports.tone = function(bot, text) {
@@ -39,16 +39,16 @@ exports.tone = function(bot, text) {
         // console.log(stats);
         
         Array.max = function( array ){
-            return Math.max.apply( Math, array );
+          return Math.max.apply( Math, array );
         };
         
-        var max = Array.max(stats_scores);
+        var max     = Array.max(stats_scores);
         
         var largest = stats_scores.indexOf(max);
         
         var emotion = stats_names[largest];
         
-        emotion = stats_names[largest];
+        emotion     = stats_names[largest];
         
         bot.postMessageToUser('hdewey', "From what I can tell, you're feeling " + emotion);
       }

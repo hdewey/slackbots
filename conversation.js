@@ -2,20 +2,20 @@
 require("dotenv").config();
 
 // Getting the watson package
-var watson = require('watson-developer-cloud');
+var watson  = require('watson-developer-cloud');
 
 // Setting up module.exports
 var exports = module.exports = {};
 
 // Importing the tone function from tone.js
-var tone = require("./tone.js").tone;
+var tone    = require("./tone.js").tone;
 
 // Using env to set up the api keys
 var conversation = watson.conversation({
-  username: process.env.WATSON_USERNAME,
-  password: process.env.WATSON_PASSWORD,
-  version: 'v1',
-  version_date: '2017-04-21'
+  username     : process.env.WATSON_USERNAME,
+  password     : process.env.WATSON_PASSWORD,
+  version      : 'v1',
+  version_date : '2017-04-21'
 });
 
 // Exporting the conversation function
@@ -27,7 +27,6 @@ exports.conversation = function(bot, user_msg, user) {
     
     // The conversation workspace id
     workspace_id : process.env.WATSON_WORKSHOP_ID,
-    // Text input
     input        : {'text': user_msg},
     context      : context
     
