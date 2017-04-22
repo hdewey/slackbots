@@ -4,6 +4,7 @@
   "description": "Making a bot for slack",
   "main": "main.js",
   "dependencies": {
+    "colors": "^1.1.2",
     "dotenv": "^4.0.0",
     "require": "^2.4.20",
     "slackbots": "^1.0.2",

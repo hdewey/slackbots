@@ -1,8 +1,13 @@
+// Setting up ENV
 require("dotenv").config();
+
+// Requiring the watson package
 var watson  = require('watson-developer-cloud');
 
+// Setting up module.exports
 var exports = module.exports = {};
 
+// Setting up the tone analyzer
 var tone_analyzer = watson.tone_analyzer({
   username    : process.env.WATSON_USERNAME,
   password    : process.env.WATSON_PASSWORD,
